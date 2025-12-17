@@ -1,0 +1,122 @@
+.rightbar {
+    padding: 24px;
+    background: #1a1a1a;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+    border: 1px solid #333;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+    color: white;
+  }
+  
+  .rightbarItem {
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+    /* padding-bottom:1px ; */
+   
+  }
+  
+  .rightbarTitle {
+    margin: 16px 0;
+    padding: 12px 16px;
+    width: 100%;
+    background: linear-gradient(135deg, #4a9eff 0%, #7bb3ff 100%);
+    border-radius: 8px;
+    text-align: center;
+    font-family: "Roboto", sans-serif;
+    font-size: 16px;
+    line-height: 20px;
+    color: white;
+    font-weight: 600;
+    box-shadow: 0 2px 8px rgba(74, 158, 255, 0.3);
+  }
+  
+  .rightbarItem > img {
+    margin-top: 16px;
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+  }
+
+  .rightbarItem > p {
+    padding: 16px 0;
+    color: #ccc;
+    line-height: 1.6;
+    font-size: 14px;
+  }
+  
+  .rightbarList {
+    list-style-type: none;
+    margin: 16px 0;
+    padding: 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+  }
+
+  .rightbarListItem {
+    display: flex;
+    align-items: center;
+    padding: 8px 12px;
+    background: #2a2a2a;
+    border-radius: 6px;
+    border: 1px solid #444;
+    transition: all 0.3s ease;
+    cursor: pointer;
+  }
+
+  .rightbarListItem:hover {
+    background: #3a3a3a;
+    border-color: #4a9eff;
+    transform: translateY(-1px);
+    box-shadow: 0 2px 8px rgba(74, 158, 255, 0.2);
+  }
+  
+  .travelwise{
+    font-weight: 600;
+    max-width: 80%;
+   font-family: 'roboto', sans-serif;
+  }
+
+  .link-tools{
+      color: #4a9eff;
+      font-weight: 500;
+      font-size: 14px;
+      cursor: pointer;
+      font-family: 'Roboto', sans-serif;
+      text-decoration: none;
+      transition: color 0.3s ease;
+      width: 100%;
+      display: block;
+    }
+
+  .link-tools:hover {
+    color: #7bb3ff;
+  }
+  
+  /* Responsive */
+  @media (max-width: 768px) {
+    .rightbar {
+      padding: 16px;
+    }
+
+    .rightbarList {
+      grid-template-columns: 1fr;
+      gap: 8px;
+    }
+
+    .rightbarListItem {
+      padding: 12px 16px;
+    }
+
+    .rightbarItem > img {
+      width: 100%;
+    }
+
+    .rightbarTitle {
+      font-size: 14px;
+      padding: 10px 12px;
+    }
+  }

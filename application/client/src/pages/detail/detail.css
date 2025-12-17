@@ -1,0 +1,19 @@
+.detail {
+    display: flex;
+    margin-top: 3em;
+    margin-left: 4em;
+    gap: 2rem;
+  }
+
+@media (max-width: 768px) {
+  .detail {
+    flex-direction: column;
+    margin-left: 1rem;
+    margin-right: 1rem;
+    margin-top: 1rem;
+  }
+
+  .detail > :last-child {
+    display: none;
+  }
+}

@@ -1,0 +1,259 @@
+.followed-container {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+  padding: 20px;
+}
+
+.followed-header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.followed-header h2 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #2c3e50;
+  margin: 0 0 10px 0;
+  font-family: 'Varela Round', sans-serif;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.posts-count {
+  font-size: 1.1rem;
+  color: #6c757d;
+  margin: 0;
+  font-family: 'Varela Round', sans-serif;
+}
+
+.posts-table-container {
+  max-width: 1400px;
+  margin: 0 auto 40px;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  overflow: hidden;
+  border: 1px solid #e9ecef;
+}
+
+.posts-table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  font-family: 'Varela Round', sans-serif;
+}
+
+.posts-table thead {
+  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+  border-bottom: 2px solid #dee2e6;
+}
+
+.posts-table th {
+  padding: 18px 20px;
+  text-align: left;
+  font-weight: 800;
+  font-size: 0.95rem;
+  color: #1a1a1a;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  border-bottom: none;
+  background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
+  border-right: 1px solid #e9ecef;
+}
+
+.posts-table th:first-child {
+  width: 100px;
+  text-align: center;
+}
+
+.posts-table th:nth-child(2) {
+  width: 50%;
+}
+
+.posts-table th:nth-child(3) {
+  width: 20%;
+}
+
+.posts-table th:last-child {
+  width: 150px;
+  border-right: none;
+}
+
+.post-row {
+  transition: all 0.2s ease;
+  border-bottom: 1px solid #f1f3f4;
+}
+
+.post-row:nth-child(even) {
+  background: #fafbfc;
+}
+
+.post-row:hover {
+  background: linear-gradient(90deg, rgba(78, 205, 196, 0.03), rgba(255, 107, 107, 0.03));
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  transform: translateX(4px);
+}
+
+.post-row td {
+  padding: 18px 20px;
+  vertical-align: middle;
+  border-bottom: 1px solid #f1f3f4;
+}
+
+.post-row:last-child td {
+  border-bottom: none;
+}
+
+.image-cell {
+  text-align: center;
+  padding: 18px 20px;
+}
+
+.post-thumbnail {
+  width: 70px;
+  height: 50px;
+  border-radius: 6px;
+  overflow: hidden;
+  border: 1px solid #dee2e6;
+  display: inline-block;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.post-thumbnail img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.2s ease;
+}
+
+.post-thumbnail img:hover {
+  transform: scale(1.05);
+}
+
+.no-image {
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(45deg, #f8f9fa, #e9ecef);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #6c757d;
+  font-size: 0.65rem;
+  font-weight: 500;
+  border-radius: 4px;
+}
+
+.title-cell {
+  font-weight: 500;
+  color: #2c3e50;
+}
+
+.title-cell a {
+  color: #2c3e50;
+  text-decoration: none;
+  transition: color 0.2s ease;
+  font-size: 1rem;
+  line-height: 1.4;
+  display: block;
+}
+
+.title-cell a:hover {
+  color: #4ecdc4;
+}
+
+.author-cell a {
+  color: #6c757d;
+  text-decoration: none;
+  transition: color 0.2s ease;
+  font-weight: 500;
+}
+
+.author-cell a:hover {
+  color: #4ecdc4;
+}
+
+.date-cell {
+  color: #6c757d;
+  font-size: 0.85rem;
+  font-weight: 400;
+  font-style: italic;
+}
+
+.followed-paging {
+  display: flex;
+  justify-content: center;
+  margin-top: 40px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .followed-container {
+    padding: 15px;
+  }
+
+  .followed-header h2 {
+    font-size: 2rem;
+  }
+
+  .posts-table-container {
+    border-radius: 10px;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+  }
+
+  .posts-table th,
+  .posts-table td {
+    padding: 14px 12px;
+  }
+
+  .posts-table th:first-child,
+  .posts-table th:nth-child(3),
+  .posts-table th:last-child {
+    display: none;
+  }
+
+  .image-cell,
+  .author-cell,
+  .date-cell {
+    display: none;
+  }
+
+  .post-thumbnail {
+    width: 55px;
+    height: 40px;
+  }
+
+  .title-cell {
+    font-size: 0.95rem;
+  }
+
+  .post-row:hover {
+    transform: none;
+  }
+}
+
+@media (max-width: 480px) {
+  .followed-container {
+    padding: 10px;
+  }
+
+  .followed-header h2 {
+    font-size: 1.8rem;
+  }
+
+  .posts-table-container {
+    border-radius: 8px;
+  }
+
+  .posts-table th,
+  .posts-table td {
+    padding: 12px 10px;
+  }
+
+  .post-thumbnail {
+    width: 50px;
+    height: 36px;
+  }
+
+  .title-cell a {
+    font-size: 0.9rem;
+  }
+}

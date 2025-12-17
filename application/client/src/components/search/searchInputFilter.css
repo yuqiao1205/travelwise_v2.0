@@ -1,0 +1,125 @@
+
+
+.search-container {
+  display: flex;
+  align-items: center;
+}
+
+.search-input-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 25px;
+  padding: 8px 16px;
+  transition: all 0.3s ease;
+  min-width: 300px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.search-input-wrapper:hover {
+  border-color: rgba(78, 205, 196, 0.5);
+  box-shadow: 0 4px 20px rgba(78, 205, 196, 0.2);
+}
+
+.search-input-wrapper:focus-within {
+  border-color: #4ecdc4;
+  box-shadow: 0 4px 25px rgba(78, 205, 196, 0.3);
+}
+
+.search-icon {
+  color: #4ecdc4;
+  cursor: pointer;
+  font-size: 20px;
+  margin-right: 8px;
+  transition: color 0.3s ease;
+}
+
+.search-icon:hover {
+  color: #7dd3c0;
+}
+
+.search-input {
+  flex: 1;
+  border: none;
+  background: transparent;
+  color: #e0e6ed;
+  font-family: 'Varela Round', sans-serif;
+  font-size: 14px;
+  outline: none;
+  padding: 0;
+}
+
+.search-input::placeholder {
+  color: #888;
+}
+
+.custom-filter {
+  position: relative;
+  margin-left: 8px;
+}
+
+.filter-button {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(5px);
+  color: #e0e6ed;
+  font-family: 'Varela Round', sans-serif;
+  font-size: 12px;
+  cursor: pointer;
+  padding: 4px 8px;
+  border-radius: 12px;
+  transition: all 0.3s ease;
+}
+
+.filter-button:hover {
+  background: rgba(78, 205, 196, 0.1);
+  border-color: rgba(78, 205, 196, 0.3);
+}
+
+.arrow-icon {
+  font-size: 16px;
+  transition: transform 0.3s ease;
+}
+
+.arrow-icon.open {
+  transform: rotate(180deg);
+}
+
+.filter-dropdown {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  background: linear-gradient(135deg, rgba(40, 40, 60, 0.95), rgba(26, 26, 46, 0.95));
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 8px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+  z-index: 10;
+  min-width: 100px;
+  margin-top: 4px;
+}
+
+.filter-option {
+  padding: 10px 12px;
+  color: #e0e6ed;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border-bottom: 1px solid rgba(78, 205, 196, 0.2);
+}
+
+.filter-option:last-child {
+  border-bottom: none;
+}
+
+.filter-option:hover {
+  background: rgba(78, 205, 196, 0.2);
+  color: #fff;
+}
+
+

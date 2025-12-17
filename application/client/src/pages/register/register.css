@@ -1,0 +1,336 @@
+.register {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #0f0f23 0%, #1a1a2e 50%, #16213e 100%);
+  position: relative;
+  overflow: hidden;
+}
+
+.register::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background:
+    radial-gradient(circle at 20% 80%, rgba(120, 119, 198, 0.3) 0%, transparent 50%),
+    radial-gradient(circle at 80% 20%, rgba(255, 119, 198, 0.3) 0%, transparent 50%),
+    radial-gradient(circle at 40% 40%, rgba(120, 255, 198, 0.2) 0%, transparent 50%);
+  animation: float 6s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px) rotate(0deg); }
+  33% { transform: translateY(-10px) rotate(1deg); }
+  66% { transform: translateY(10px) rotate(-1deg); }
+}
+
+.register-container {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  max-width: 900px;
+  width: 100%;
+  margin: 20px;
+  border-radius: 24px;
+  overflow: hidden;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+}
+
+.register-form-section {
+  flex: 1;
+  padding: 40px;
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(20px);
+  border-right: 1px solid rgba(255, 255, 255, 0.1);
+  position: relative;
+}
+
+.register-form-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(45deg, transparent 30%, rgba(255, 255, 255, 0.05) 50%, transparent 70%);
+  pointer-events: none;
+}
+
+.register-image-section {
+  flex: 1;
+  background: url("../../img/sf-bridge1.jpg") center/cover;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.image-overlay {
+  background: rgba(0, 0, 0, 0.4);
+  padding: 40px;
+  border-radius: 16px;
+  text-align: center;
+  color: white;
+  max-width: 300px;
+}
+
+.image-overlay h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 15px;
+  font-family: 'Varela Round', sans-serif;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.image-overlay p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  font-family: 'Varela Round', sans-serif;
+  opacity: 0.9;
+}
+
+.register-header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.register-icon {
+  font-size: 48px;
+  color: #00d4ff;
+  margin-bottom: 15px;
+  filter: drop-shadow(0 0 10px rgba(0, 212, 255, 0.5));
+}
+
+.registerTitle {
+  font-size: 28px;
+  font-weight: 700;
+  color: #ffffff;
+  margin: 0 0 10px 0;
+  font-family: 'Varela Round', sans-serif;
+  text-shadow: 0 0 20px rgba(0, 212, 255, 0.5);
+}
+
+.register-subtitle {
+  color: #b8c5d6;
+  font-size: 16px;
+  margin: 0;
+  font-family: 'Varela Round', sans-serif;
+}
+
+.registerForm {
+  display: flex;
+  flex-direction: column;
+  max-width: 300px;
+  margin: 0 auto;
+}
+
+.input-group {
+  margin-bottom: 15px;
+}
+
+.input-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.input-icon {
+  position: absolute;
+  left: 15px;
+  color: #00d4ff;
+  font-size: 20px;
+  z-index: 1;
+  filter: drop-shadow(0 0 5px rgba(0, 212, 255, 0.5));
+}
+
+.registerInput {
+  width: 100%;
+  padding: 15px 15px 15px 50px;
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  border-radius: 12px;
+  font-size: 16px;
+  font-family: 'Varela Round', sans-serif;
+  background: rgba(255, 255, 255, 0.05);
+  color: #ffffff;
+  transition: all 0.3s ease;
+  outline: none;
+  backdrop-filter: blur(10px);
+}
+
+.registerInput::placeholder {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.registerInput:focus {
+  border-color: #00d4ff;
+  box-shadow: 0 0 20px rgba(0, 212, 255, 0.3);
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.registerButton {
+  width: 100%;
+  background: linear-gradient(45deg, #00d4ff, #0099cc);
+  color: white;
+  border: none;
+  padding: 15px;
+  border-radius: 12px;
+  font-size: 16px;
+  font-weight: 600;
+  font-family: 'Varela Round', sans-serif;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-top: 10px;
+  box-shadow: 0 4px 15px rgba(0, 212, 255, 0.4);
+  position: relative;
+  overflow: hidden;
+}
+
+.registerButton::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+  transition: left 0.5s;
+}
+
+.registerButton:hover:not(:disabled)::before {
+  left: 100%;
+}
+
+.registerButton:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(0, 212, 255, 0.6);
+}
+
+.registerButton:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.errorMessage {
+  background: rgba(231, 76, 60, 0.1);
+  color: #e74c3c;
+  padding: 8px 12px;
+  border-radius: 8px;
+  border: 1px solid rgba(231, 76, 60, 0.2);
+  margin: 5px 0;
+  font-size: 14px;
+  font-family: 'Varela Round', sans-serif;
+}
+
+.login-link {
+  text-align: center;
+  margin-top: 20px;
+  color: #b8c5d6;
+  font-size: 14px;
+  font-family: 'Varela Round', sans-serif;
+}
+
+.linktologin {
+  color: #00d4ff;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  text-shadow: 0 0 5px rgba(0, 212, 255, 0.5);
+}
+
+.linktologin:hover {
+  color: #ffffff;
+  text-shadow: 0 0 10px rgba(0, 212, 255, 0.8);
+}
+
+.back-link {
+  text-align: center;
+  margin-top: 15px;
+}
+
+.linktohome {
+  color: #8892a0;
+  text-decoration: none;
+  font-size: 14px;
+  font-family: 'Varela Round', sans-serif;
+  transition: all 0.3s ease;
+}
+
+.linktohome:hover {
+  color: #00d4ff;
+  text-shadow: 0 0 5px rgba(0, 212, 255, 0.5);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .register-container {
+    flex-direction: column;
+    max-width: 400px;
+  }
+
+  .register-form-section {
+    border-right: none;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  }
+
+  .register-image-section {
+    min-height: 200px;
+  }
+
+  .image-overlay {
+    padding: 20px;
+  }
+
+  .image-overlay h2 {
+    font-size: 1.5rem;
+  }
+
+  .image-overlay p {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .register-container {
+    margin: 10px;
+  }
+
+  .register-form-section {
+    padding: 30px 20px;
+  }
+
+  .registerTitle {
+    font-size: 24px;
+  }
+
+  .register-subtitle {
+    font-size: 14px;
+  }
+
+  .registerInput {
+    padding: 12px 12px 12px 45px;
+    font-size: 14px;
+  }
+
+  .input-icon {
+    left: 12px;
+    font-size: 18px;
+  }
+
+  .image-overlay {
+    padding: 15px;
+    max-width: 250px;
+  }
+
+  .image-overlay h2 {
+    font-size: 1.3rem;
+  }
+
+  .image-overlay p {
+    font-size: 0.9rem;
+  }
+}

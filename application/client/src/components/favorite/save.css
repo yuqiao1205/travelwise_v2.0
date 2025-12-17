@@ -1,0 +1,25 @@
+.save{
+    /* display: flex; */
+    justify-content: space-between;
+    align-items: center;
+    /* margin: 0 0 10px 0; */
+    /* padding: 0 10px; */
+    /* border-bottom: 1px solid #ccc; */
+}
+
+.errorMessage {
+    font-size: 14px;
+    color: #ff6b6b;
+    text-align: center;
+    opacity: 1;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.errorMessage:empty {
+    display: none;
+}
+
+  /* .fav-button{
+    padding-top: 4px;
+ 
+  } */

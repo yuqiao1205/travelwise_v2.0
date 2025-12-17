@@ -1,0 +1,354 @@
+.content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  position: relative;
+  overflow: hidden;
+}
+
+.content::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(45deg, #4ecdc4, #44a08d);
+}
+
+.postImg {
+  width: 100%;
+  max-width: 800px;
+  height: 400px;
+  object-fit: cover;
+  border-radius: 12px;
+  margin: 0 auto 2rem;
+  display: block;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease;
+}
+
+.postImg:hover {
+  transform: scale(1.02);
+}
+
+.post-actions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 1rem 0 2rem;
+  padding: 1rem;
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(10px);
+  border-radius: 12px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.postIcon {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.followerIcon {
+  display: flex;
+  align-items: center;
+}
+
+.delimg,
+.editimg {
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border-radius: 50%;
+  padding: 8px;
+  background: rgba(255, 255, 255, 0.9);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.delimg:hover,
+.editimg:hover {
+  transform: scale(1.1);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+}
+
+.likeIcon,
+.favIcon {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 1rem;
+  background: rgba(78, 205, 196, 0.1);
+  border-radius: 25px;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.likeIcon:hover,
+.favIcon:hover {
+  background: rgba(78, 205, 196, 0.2);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(78, 205, 196, 0.2);
+}
+
+/* Hide empty error messages and style when visible */
+.favIcon .errorMessage,
+.followerIcon .errorMessage {
+  font-size: 0.8rem;
+  color: #ff6b6b;
+  margin-left: 0.5rem;
+  padding: 0.25rem 0.5rem;
+  background: white;
+  border-radius: 4px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+.favIcon .errorMessage:empty,
+.followerIcon .errorMessage:empty {
+  display: none;
+}
+
+.postTitle {
+  font-size: 2.5rem;
+  font-family: 'Varela Round', sans-serif;
+  font-weight: 700;
+  color: #2c3e50;
+  margin: 2rem 0 1rem;
+  line-height: 1.2;
+  position: relative;
+}
+
+.postTitle::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 0;
+  width: 80px;
+  height: 4px;
+  background: linear-gradient(45deg, #4ecdc4, #44a08d);
+  border-radius: 2px;
+}
+
+.author-section {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin: 2rem 0;
+  padding: 1.5rem;
+  background: rgba(78, 205, 196, 0.05);
+  border-radius: 12px;
+  border: 1px solid rgba(78, 205, 196, 0.1);
+}
+
+.authorimg {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  object-fit: cover;
+  cursor: pointer;
+  border: 3px solid #4ecdc4;
+  transition: all 0.3s ease;
+}
+
+.authorimg:hover {
+  transform: scale(1.1);
+  box-shadow: 0 4px 15px rgba(78, 205, 196, 0.3);
+}
+
+.postInfo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.postAuthor {
+  font-family: 'Varela Round', sans-serif;
+  font-weight: 600;
+  font-size: 1.1rem;
+  color: #34495e;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.postAuthor:hover {
+  color: #4ecdc4;
+}
+
+.postdate {
+  font-family: 'Varela Round', sans-serif;
+  font-size: 0.9rem;
+  color: #7f8c8d;
+  font-style: italic;
+}
+
+.postDesc {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: #2c3e50;
+  font-family: 'Varela Round', sans-serif;
+  font-weight: 400;
+  margin: 2rem 0;
+  text-align: justify;
+}
+
+.postDesc::first-letter {
+  font-size: 3rem;
+  font-weight: 700;
+  color: #4ecdc4;
+  float: left;
+  margin-right: 8px;
+  margin-top: 8px;
+  line-height: 1;
+}
+
+.postComment {
+  margin-top: 3rem;
+  padding-top: 2rem;
+  border-top: 2px solid #ecf0f1;
+}
+
+.postCommentText {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #2c3e50;
+  font-family: 'Varela Round', sans-serif;
+  margin-bottom: 1.5rem;
+  position: relative;
+}
+
+.postCommentText::after {
+  content: '';
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 50px;
+  height: 3px;
+  background: #4ecdc4;
+  border-radius: 2px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .content {
+    margin: 1rem;
+    padding: 1.5rem;
+    border-radius: 12px;
+  }
+
+  .postImg {
+    height: 250px;
+    border-radius: 8px;
+  }
+
+  .post-actions {
+    flex-direction: column;
+    gap: 1rem;
+    align-items: stretch;
+  }
+
+  .postIcon {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .followerIcon {
+    justify-content: center;
+  }
+
+  .delimg,
+  .editimg {
+    width: 35px;
+    height: 35px;
+  }
+
+  .likeIcon,
+  .favIcon {
+    padding: 0.4rem 0.8rem;
+    font-size: 0.9rem;
+  }
+
+  .postTitle {
+    font-size: 2rem;
+  }
+
+  .author-section {
+    padding: 1rem;
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .authorimg {
+    width: 50px;
+    height: 50px;
+  }
+
+  .postInfo {
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  .postDesc {
+    font-size: 1rem;
+    line-height: 1.6;
+  }
+
+  .postDesc::first-letter {
+    font-size: 2.5rem;
+    margin-top: 4px;
+  }
+
+  .postCommentText {
+    font-size: 1.3rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .content {
+    margin: 0.5rem;
+    padding: 1rem;
+  }
+
+  .postImg {
+    height: 200px;
+  }
+
+  .post-actions {
+    padding: 0.8rem;
+  }
+
+  .postIcon {
+    gap: 0.5rem;
+  }
+
+  .likeIcon,
+  .favIcon {
+    padding: 0.3rem 0.6rem;
+    font-size: 0.8rem;
+  }
+
+  .postTitle {
+    font-size: 1.8rem;
+  }
+
+  .author-section {
+    padding: 0.8rem;
+  }
+
+  .postDesc {
+    font-size: 0.95rem;
+  }
+
+  .postCommentText {
+    font-size: 1.1rem;
+  }
+}

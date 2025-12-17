@@ -1,0 +1,136 @@
+/* Posts Container */
+.posts-container {
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+/* Posts Grid */
+.posts {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  padding: 2rem;
+}
+
+/* Individual Post Card Wrapper */
+.post {
+  display: flex;
+  height: 100%;
+  min-height: 420px;
+}
+
+.postFollow {
+  display: none;
+}
+
+/* Section Titles */
+.latest-post {
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: #1a1a2e;
+  padding: 1.5rem 2rem 0.5rem;
+  margin: 0;
+  position: relative;
+}
+
+.latest-post::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 2rem;
+  width: 60px;
+  height: 3px;
+  background: linear-gradient(90deg, #4ecdc4, #ff6b6b);
+  border-radius: 2px;
+}
+
+.region-title {
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #1a1a2e;
+  text-align: center;
+  padding: 1.5rem 2rem;
+  margin: 0;
+  display: none; /* Hide since we now show in Header2 */
+}
+
+/* Title Holder - Keeping for compatibility */
+.title-holder {
+  display: none;
+}
+
+/* Paging */
+.paging {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: center;
+  z-index: 100;
+  background: rgba(255, 255, 255, 0.98);
+  backdrop-filter: blur(10px);
+  padding: 0.75rem 0;
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+  .posts {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+    padding: 1.5rem;
+  }
+}
+
+@media (max-width: 1024px) {
+  .posts {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+    padding: 1.5rem;
+  }
+
+  .post {
+    min-height: 400px;
+  }
+}
+
+@media (max-width: 768px) {
+  .posts {
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+    padding: 1rem;
+  }
+
+  .post {
+    min-height: 380px;
+  }
+
+  .latest-post {
+    font-size: 1.5rem;
+    padding: 1rem 1rem 0.5rem;
+  }
+
+  .latest-post::after {
+    left: 1rem;
+    width: 50px;
+  }
+}
+
+@media (max-width: 480px) {
+  .posts {
+    padding: 0.75rem;
+    gap: 1rem;
+  }
+
+  .post {
+    min-height: 350px;
+  }
+
+  .latest-post {
+    font-size: 1.3rem;
+  }
+}

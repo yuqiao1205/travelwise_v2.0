@@ -1,0 +1,163 @@
+/* Container for all three nav items */
+.nav-features {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+/* Individual dropdown container */
+.nav-dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+/* Dropdown button styling */
+.nav-dropdown-btn {
+  background: none;
+  color: #e0e6ed;
+  border: none;
+  cursor: pointer;
+  font-family: 'Varela Round', sans-serif;
+  font-weight: 500;
+  font-size: 0.95rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1rem;
+  border-radius: 12px;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.nav-dropdown-btn::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(78, 205, 196, 0.2), transparent);
+  transition: left 0.5s ease;
+}
+
+.nav-dropdown-btn:hover::before {
+  left: 100%;
+}
+
+.nav-dropdown-btn:hover {
+  color: #4ecdc4;
+  background: rgba(78, 205, 196, 0.1);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(78, 205, 196, 0.2);
+}
+
+.nav-dropdown-icon {
+  font-size: 1.1rem;
+}
+
+/* Dropdown content - hidden by default */
+.nav-dropdown-content {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.98), rgba(245, 245, 245, 0.98));
+  min-width: 150px;
+  box-shadow: 0px 8px 24px rgba(0, 0, 0, 0.25);
+  z-index: 1000;
+  font-family: 'Varela Round', sans-serif;
+  font-size: 14px;
+  border-radius: 12px;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  overflow: hidden;
+  margin-top: -1px;
+}
+
+/* Show dropdown on hover */
+.nav-dropdown:hover .nav-dropdown-content {
+  display: block;
+}
+
+/* Keep dropdown visible when hovering over the content */
+.nav-dropdown-content:hover {
+  display: block;
+}
+
+/* Dropdown links */
+.nav-dropdown-content a {
+  color: #333;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  transition: all 0.2s ease;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.nav-dropdown-content a:last-child {
+  border-bottom: none;
+}
+
+.nav-dropdown-content a:hover {
+  background: linear-gradient(90deg, #4ecdc4, #44a8a0);
+  color: white;
+  padding-left: 20px;
+}
+
+/* Create Post button styling */
+.nav-create-post-btn {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: linear-gradient(45deg, #ff6b6b, #4ecdc4);
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-family: 'Varela Round', sans-serif;
+  font-weight: 500;
+  font-size: 0.95rem;
+  padding: 0.75rem 1rem;
+  border-radius: 12px;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  box-shadow: 0 4px 15px rgba(255, 107, 107, 0.3);
+}
+
+.nav-create-post-btn:hover {
+  background: linear-gradient(45deg, #ff4757, #3742fa);
+  transform: translateY(-3px);
+  box-shadow: 0 6px 20px rgba(255, 71, 87, 0.4);
+  color: white;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .nav-features {
+    flex-direction: column;
+    width: 100%;
+    gap: 0.5rem;
+  }
+
+  .nav-dropdown {
+    width: 100%;
+  }
+
+  .nav-dropdown-btn {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .nav-dropdown-content {
+    position: relative;
+    width: 100%;
+    margin-top: 0;
+    box-shadow: none;
+    border-radius: 0 0 12px 12px;
+  }
+
+  .nav-create-post-btn {
+    width: 100%;
+    justify-content: center;
+  }
+}
